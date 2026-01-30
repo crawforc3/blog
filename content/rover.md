@@ -63,8 +63,8 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 ![Hand holding a tap tool inserted into aluminum extrusion, cutting threads into the end](images/2025-11-11-tapping-threads-in-aluminum-frame.jpg)
 *Tapping M6 threads by hand*
 
-![Rectangular aluminum frame on garage floor with four large black wheels attached at the corners](images/2025-11-11-frame-with-wheels-mockup.jpg)
-*First mockup with wheels attached*
+![Rectangular aluminum frame on garage floor with four large black wheels placed at the corners](images/2025-11-11-frame-with-wheels-mockup.jpg)
+*First mockup with wheels placed for sizing*
 
 ![Aluminum frame with white 3D-printed motor mounts and steering components attached](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 *Frame with steering and motor mounts installed*
@@ -111,7 +111,7 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 *Servo installed with mount and custom arm*
 
 ![Top view of steering linkage showing tie rods connecting servo to both front knuckles](images/2026-01-steering-linkage-assembly.jpg)
-*Complete steering linkage assembly*
+*Steering linkage*
 
 ### Wheels and Tires
 
@@ -121,10 +121,10 @@ I printed my own wheels. 17cm diameter, 6.5cm wide, with a hex hub interface so 
 *PLA wheel hub fresh off the printer*
 
 ![Several wheel hubs and black TPU tires spread out on workbench for test fitting](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
-*Testing TPU tire fit on various wheel prototypes*
+*Tire fit on wheel prototype*
 
 ![Two completed wheels with white hubs and black knobby tires side by side](images/2025-09-23-two-complete-wheel-assemblies.jpg)
-*Completed wheel assemblies with bearings pressed in*
+*Final wheels and tires*
 
 ### Electronics
 
@@ -141,7 +141,7 @@ Power is two 3S LiPo batteries, 15000mAh each. That's 333Wh total, which should 
 Inside the enclosure, I designed caddies for the batteries, flight controller, and ESCs. Each component velcro-straps to a caddy, and the caddies screw into the enclosure where I added heat inserts. It keeps everything modular and easy to swap out when I inevitably fry something.
 
 ![Inside of enclosure showing white 3D-printed trays holding batteries and electronics with velcro straps](images/2025-12-electronics-caddies-detail.jpg)
-*Component caddies for batteries, flight controller, and ESCs*
+*Enclosure with batteries and ESCs installed in caddies*
 
 ArduPilot configuration was its own adventure. I spent three days figuring out that "Roll" controls steering in rover mode, not "Yaw" like you'd expect. The motors use SERVO function 70 (throttle), and steering uses function 26 (GroundSteering). Now it makes sense. At the time, it did not.
 
