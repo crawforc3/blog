@@ -129,22 +129,7 @@ Custom 17cm diameter wheels were designed to provide sufficient ground clearance
 
 ![Current rover state](images/current-status.jpg)
 
-Mechanical assembly is largely complete. Current work is focused on electronics integration and validating RC control before implementing autonomous navigation.
-
-**Completed:**
-- Frame fabrication
-- Drivetrain mechanical assembly
-- Steering linkage
-- Component mounting
-
-**In Progress:**
-- Wiring and power distribution
-- ArduPilot configuration
-- RC control validation
-
-**Planned:**
-- GPS waypoint navigation testing
-- Autonomous mission execution
+Current focus is on electronics integration and validating RC control before implementing autonomous navigation. Components are subject to iteration as testing reveals needed improvements.
 
 ## Tools & Software
 
