@@ -75,49 +75,59 @@ Custom 17cm diameter wheels were designed to provide sufficient ground clearance
 
 ## Build Progress
 
-### Design
-
-![Early concept sketches](images/2025-09-early-rover-concept-sketches.jpg)
-
-Initial design work in Onshape, establishing frame dimensions, wheel placement, and component layout. Key early decisions included frame material selection and steering geometry.
-
-### Electronics Integration
-
-Bench testing of the electronics stack: ESCs, steering servo, flight controller, and power distribution. Verified basic functionality before mechanical integration.
-
-Initial ArduPilot configuration required understanding the mapping between RC channels, SERVO outputs, and the Rover firmware's expectations for throttle and steering control.
-
-### 3D Printed Components
-
-![All four wheels and tires laid out](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
-
-Printed wheel and tire assemblies:
-- Wheels: PLA (~5 hours each)
-- Tires: TPU (~5 hours each)
-- Total filament: ~1000g
-
-### Frame Fabrication
+### Frame and Body
 
 ![Completed aluminum frame](images/2025-11-11-complete-2020-aluminum-frame-assembly.jpg)
 
-Cut and assembled the 2020 aluminum extrusion frame. Drilled and tapped M6 threads for fastening. Verified frame squareness by measuring diagonals.
+<!-- TODO: Fill in details about:
+- Frame material selection (why 2020 extrusion)
+- Dimensions and layout decisions
+- Fabrication process (cutting, drilling, tapping)
+- Body panel design (if applicable)
+-->
 
-![Frame with wheels mockup](images/2025-11-11-frame-with-wheels-mockup.jpg)
+### Powertrain
 
-### Servo Mount Iteration
+<!-- TODO: Fill in details about:
+- Motor selection and mounting
+- ESC integration
+- Bearings and axle design
+- Gear reduction (if any)
+- Flexible couplers
+-->
 
-The steering servo mount required four design iterations:
+### Steering
 
-1. Initial design had insufficient clearance for servo body
-2. Screw hole diameter incorrect (designed for head OD vs shank)
-3. No clearance for servo wiring
-4. Final design: open-sided mount allowing lateral insertion
+<!-- TODO: Fill in details about:
+- Ackerman geometry implementation
+- Steering linkage design
+- Servo mounting iterations
+- Knuckle and tie rod design
+-->
 
-This process reinforced the importance of prototyping with actual components rather than relying solely on datasheet dimensions, and designing for assembly sequence including cable routing.
+### Wheels and Tires
+
+![All four wheels and tires](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
+
+<!-- TODO: Fill in details about:
+- Wheel design (diameter, width, hub interface)
+- Tire material and tread pattern
+- Bearing selection and press-fit
+-->
+
+### Electronics
+
+<!-- TODO: Fill in details about:
+- Flight controller setup
+- ESC/servo wiring
+- Power distribution
+- RC receiver integration
+- ArduPilot configuration
+-->
 
 ## Current Status
 
-![Current rover state with servo and motor mounts](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
+![Current rover state](images/current-status.jpg)
 
 Mechanical assembly is largely complete. Current work is focused on electronics integration and validating RC control before implementing autonomous navigation.
 
