@@ -3,134 +3,142 @@ title: Autonomous Rover Build
 tags: [project, robotics, ardupilot]
 ---
 
-# Autonomous Rover Build
+# Autonomous Ground Vehicle
 
-Building a self-driving unmanned homebrew ground vehicle because I'm the neighborhood's best neighbor (self-proclaimed).
+An ongoing project building an autonomous ground vehicle capable of GPS waypoint navigation across varied suburban terrain.
 
-![CAD render of the completed rover design](images/2025-11-final-rover-assembly-perspective.png)
+![CAD render of the rover design](images/2025-11-final-rover-assembly-perspective.png)
 
-I brew great beer and share it with everyone in Seattle. My neighbors give me eggs, fresh bread, sometimes vegetables. It's a beautiful barter economy. But walking beer over is inefficient. So naturally, the solution is to build an autonomous rover that can do it for me.
+## Skills Demonstrated
 
-The body panels are inspired by ED-209 from RoboCop—because if you're going to build a delivery robot, it might as well look intimidating.
+- **Mechanical Design:** CAD modeling, Ackerman steering geometry, drivetrain layout, 3D printed component design
+- **Fabrication:** Aluminum frame construction, 3D printing (PLA/TPU), wiring harness assembly
+- **Embedded Systems:** ArduPilot configuration, ESC/servo integration, RC systems
+- **Software:** Onshape CAD, QGroundControl, ArduPilot firmware
 
-## Technical Specs
+## Project Requirements
 
-| Component | Details |
-|-----------|---------|
-| **Frame** | Custom 24" x 18" aluminum 2020 T-slot extrusion |
-| **Drivetrain** | 2-wheel drive, dual HOBBYWING QUICRUN 1080 G2 ESCs with 540 40T brushed motors |
-| **Steering** | Ackerman geometry with Zoskay DS3235 waterproof servo (35kg torque) |
-| **Brains** | SpeedyBee F405 WING (STM32F405 @ 168MHz) running ArduPilot firmware |
-| **Navigation** | Matek M10Q-5883 GPS + compass module |
-| **Power** | Dual 3S LiPo batteries (15000mAh each, 333Wh total) |
-| **Wheels** | Custom 3D-printed PLA (17cm diameter, 6.5cm wide, 6000RS bearings) |
-| **Control** | Radiomaster TX12 MKII with ExpressLRS, BetaFPV SuperD receiver |
+| Requirement | Specification |
+|-------------|---------------|
+| Payload capacity | 10 lbs |
+| Target speed | ~3 mph |
+| Terrain | Paved surfaces, sidewalks, curbs, grass, mild grades |
+| Navigation | GPS waypoint autonomy via ArduPilot |
+| Operating range | Multi-kilometer |
 
-## Requirements
+## Technical Specifications
 
-- **Payload:** 10 pounds (enough for a growler or two)
-- **Speed:** ~3 mph (walking pace)
-- **Terrain:** Seattle neighborhood streets, sidewalks, curbs, grass, mild hills
-- **Autonomy:** GPS waypoint navigation via ArduPilot
-- **Range:** Multi-kilometer (anywhere in the neighborhood)
+| System | Component | Details |
+|--------|-----------|---------|
+| Frame | 2020 aluminum extrusion | 24" x 18" custom welded/bolted frame |
+| Drivetrain | Brushed DC motors | Dual HOBBYWING QUICRUN 1080 G2 ESCs, 540 40T motors |
+| Steering | Ackerman geometry | Zoskay DS3235 servo (35kg-cm torque) |
+| Flight controller | SpeedyBee F405 WING | STM32F405 @ 168MHz, ArduPilot Rover firmware |
+| GPS | Matek M10Q-5883 | GPS + magnetometer module |
+| Power | Dual 3S LiPo | 15000mAh each, 333Wh total capacity |
+| Wheels | Custom 3D-printed | 17cm diameter, 6.5cm width, 6000RS bearings |
+| RC | ExpressLRS | Radiomaster TX12 MKII transmitter, BetaFPV SuperD receiver |
 
-## Build Log
+<!-- TODO: Add measured specs once available:
+- Total vehicle weight
+- Ground clearance
+- Turning radius
+- Estimated runtime at cruise speed
+- Max grade capability
+-->
 
-This is an ongoing project as I learn about building machines from scratch. Everything here is a work in progress.
+## Design Decisions
+
+### Ackerman Steering Geometry
+
+<!-- TODO: Add rationale - why Ackerman over skid steer or differential?
+Likely: better tire wear, more natural turning, works well with ArduPilot rover mode -->
+
+Selected Ackerman steering to provide proper turning geometry where the inside wheel turns at a sharper angle than the outside wheel, reducing tire scrub and improving low-speed maneuverability.
+
+### Brushed vs Brushless Motors
+
+Selected brushed DC motors for this application. At the target speed of 3 mph, brushed motors provide adequate performance with simpler control characteristics and better low-speed torque control compared to sensored brushless alternatives.
+
+<!-- TODO: Add more detail on motor selection criteria, torque calculations -->
+
+### Wheel Design
+
+Custom 17cm diameter wheels were designed to provide sufficient ground clearance for curb transitions while maintaining a low center of gravity.
+
+<!-- TODO: Add:
+- Ground clearance measurement
+- Why 17cm specifically (curb height + clearance margin?)
+- TPU tire durometer/flexibility choice
+- Bearing selection rationale
+-->
+
+## Build Progress
 
 ### Design Phase (September 2025)
 
 ![Early concept sketches](images/2025-09-early-rover-concept-sketches.jpg)
 
-Started designing in Onshape (browser-based CAD, works on Debian). Went with brushed motors instead of brushless—simpler and easier to control at low speeds.
+Initial design work in Onshape, establishing frame dimensions, wheel placement, and component layout. Key early decisions included frame material selection and steering geometry.
 
-Key decisions:
-- Custom 17cm 3D-printed wheels for curb clearance
-- Ackerman steering geometry (inside wheel turns sharper than outside)
-- 2020 aluminum T-slot extrusion frame—like adult LEGO
+### Electronics Integration (September 2025)
 
-### Electronics Test (September 16, 2025)
+Bench testing of the electronics stack: ESCs, steering servo, flight controller, and power distribution. Verified basic functionality before mechanical integration.
 
-First bench test: wired up ESCs, servo, and batteries. Nothing caught fire. The SpeedyBee F405 flight controller is tiny and terrifying.
+Initial ArduPilot configuration required understanding the mapping between RC channels, SERVO outputs, and the Rover firmware's expectations for throttle and steering control.
 
-### ArduPilot Configuration (September 17-19, 2025)
-
-Three days of madness:
-- Forgot to arm the rover
-- Confused Motor1 with Throttle
-- Learned that "Roll" controls steering on a ground vehicle
-- QGroundControl on Debian (Mission Planner is Windows-only)
-
-### 3D Printing (September 20-23, 2025)
+### 3D Printed Components (September 2025)
 
 ![All four wheels and tires laid out](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
 
-Printed all four wheels and tire assemblies:
-- Wheels: PLA, ~5 hours each
-- Tires: TPU, ~5 hours each
-- All prints successful, no failures
-- ~1000g filament total
+Printed wheel and tire assemblies:
+- Wheels: PLA (~5 hours each)
+- Tires: TPU (~5 hours each)
+- Total filament: ~1000g
 
-### Motor Assembly (October 15, 2025)
-
-Assembled steering servo and tested on bench. Digital servos are impressive—35kg of torque in a tiny package.
-
-### Steering Linkage (October 25, 2025)
-
-Learned Ackerman steering geometry the hard way. 3D printed steering knuckles and servo mounts. Everything fit first try.
-
-### Tool Acquisition (November 2, 2025)
-
-Got a Ryobi miter saw and aluminum blade off Craigslist. Spent as much on tools as parts at this point.
-
-### Cutting Aluminum (November 10, 2025)
-
-Cutting aluminum is easier than expected. Brother helped with the cuts.
-
-### Frame Assembly (November 11, 2025)
+### Frame Fabrication (November 2025)
 
 ![Completed aluminum frame](images/2025-11-11-complete-2020-aluminum-frame-assembly.jpg)
 
-Drilled and tapped M6 threads into aluminum with a hand drill. Holes were "barely serviceable" but functional. Frame came together square—both diagonals measured the same.
+Cut and assembled the 2020 aluminum extrusion frame. Drilled and tapped M6 threads for fastening. Verified frame squareness by measuring diagonals.
 
 ![Frame with wheels mockup](images/2025-11-11-frame-with-wheels-mockup.jpg)
 
-Tools used:
-- Hand drill (no drill press)
-- M6 tap from tap and die set
-- Many clamps
-- Multiple 250-piece metric screw assortment packs
+### Servo Mount Iteration (November 2025)
 
-### Wiring Harnesses (November 14-15, 2025)
+The steering servo mount required four design iterations:
 
-A week in connector hell. JST connectors, custom wiring harnesses, tiny pins lost on the garage floor. Used pre-crimped wires for test harnesses.
+1. Initial design had insufficient clearance for servo body
+2. Screw hole diameter incorrect (designed for head OD vs shank)
+3. No clearance for servo wiring
+4. Final design: open-sided mount allowing lateral insertion
 
-### Final Assembly (November 18, 2025)
-
-Attached steering servo and both drive motors to frame. Starting to look like an actual rover.
-
-### Servo Mount (November 21, 2025)
-
-The servo mount that took four tries:
-1. Servo body 0.5mm too big for pocket
-2. Screw holes too big (designed for heads not shanks)
-3. Forgot about the wire coming out
-4. Just removed one entire side—simple solution
-
-Lessons learned:
-- Measure the actual part, not the datasheet
-- Account for wires, connectors, everything
-- M3 screws need 3.2mm holes, not 3.5mm
-- CAD is too perfect—reality is messier
+This process reinforced the importance of prototyping with actual components rather than relying solely on datasheet dimensions, and designing for assembly sequence including cable routing.
 
 ## Current Status
 
 ![Current rover state with servo and motor mounts](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 
-This is a long-term learning project. Current focus is on electronics integration and getting basic remote control working before moving on to autonomous features.
+Mechanical assembly is largely complete. Current work is focused on electronics integration and validating RC control before implementing autonomous navigation.
+
+**Completed:**
+- Frame fabrication
+- Drivetrain mechanical assembly
+- Steering linkage
+- Component mounting
+
+**In Progress:**
+- Wiring and power distribution
+- ArduPilot configuration
+- RC control validation
+
+**Planned:**
+- GPS waypoint navigation testing
+- Autonomous mission execution
 
 ## Tools & Software
 
-- **CAD:** Onshape (browser-based, works on Linux)
-- **Mission Planning:** QGroundControl on Debian
-- **Firmware:** ArduPilot
+- **CAD:** Onshape
+- **Slicing:** PrusaSlicer
+- **Mission Planning:** QGroundControl
+- **Firmware:** ArduPilot Rover
