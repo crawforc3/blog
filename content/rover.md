@@ -129,6 +129,10 @@ Custom 17cm diameter wheels were designed to provide sufficient ground clearance
 
 ![Current rover state](images/current-status.jpg)
 
+<video controls width="100%">
+  <source src="images/VID_20251209_151820062.mp4" type="video/mp4">
+</video>
+
 Current focus is on electronics integration and validating RC control before implementing autonomous navigation. Components are subject to iteration as testing reveals needed improvements.
 
 ## Tools & Software
