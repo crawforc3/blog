@@ -7,6 +7,8 @@ tags: [project, robotics, ardupilot]
 
 Building a self-driving unmanned homebrew ground vehicle because I'm the neighborhood's best neighbor (self-proclaimed).
 
+![CAD render of the completed rover design](images/2025-11-final-rover-assembly-perspective.png)
+
 I brew great beer and share it with everyone in Seattle. My neighbors give me eggs, fresh bread, sometimes vegetables. It's a beautiful barter economy. But walking beer over is inefficient. So naturally, the solution is to build an autonomous rover that can do it for me.
 
 The body panels are inspired by ED-209 from RoboCop—because if you're going to build a delivery robot, it might as well look intimidating.
@@ -55,6 +57,8 @@ Started with "maybe $300?" Ended up around $800.
 
 ### Design Phase (September 2025)
 
+![Early concept sketches](images/2025-09-early-rover-concept-sketches.jpg)
+
 Started designing in Onshape (browser-based CAD, works on Debian). Went with brushed motors instead of brushless—simpler, easier to control, saved $100-200 on budget.
 
 Key decisions:
@@ -75,6 +79,8 @@ Three days of madness:
 - QGroundControl on Debian (Mission Planner is Windows-only)
 
 ### 3D Printing (September 20-23, 2025)
+
+![All four wheels and tires laid out](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
 
 Printed all four wheels and tire assemblies:
 - Wheels: PLA, ~5 hours each
@@ -100,7 +106,11 @@ Cutting aluminum is easier than expected. Brother helped with the cuts.
 
 ### Frame Assembly (November 11, 2025)
 
+![Completed aluminum frame](images/2025-11-11-complete-2020-aluminum-frame-assembly.jpg)
+
 Drilled and tapped M6 threads into aluminum with a hand drill. Holes were "barely serviceable" but functional. Frame came together square—both diagonals measured the same.
+
+![Frame with wheels mockup](images/2025-11-11-frame-with-wheels-mockup.jpg)
 
 Tools used:
 - Hand drill (no drill press)
@@ -131,6 +141,8 @@ Lessons learned:
 - CAD is too perfect—reality is messier
 
 ## Current Status
+
+![Current rover state with servo and motor mounts](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 
 - **Completed:** Frame, drivetrain, steering geometry, component procurement
 - **In Progress:** Electronics integration, power distribution, flight controller config
