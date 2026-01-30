@@ -75,19 +75,19 @@ Custom 17cm diameter wheels were designed to provide sufficient ground clearance
 
 ## Build Progress
 
-### Design Phase (September 2025)
+### Design
 
 ![Early concept sketches](images/2025-09-early-rover-concept-sketches.jpg)
 
 Initial design work in Onshape, establishing frame dimensions, wheel placement, and component layout. Key early decisions included frame material selection and steering geometry.
 
-### Electronics Integration (September 2025)
+### Electronics Integration
 
 Bench testing of the electronics stack: ESCs, steering servo, flight controller, and power distribution. Verified basic functionality before mechanical integration.
 
 Initial ArduPilot configuration required understanding the mapping between RC channels, SERVO outputs, and the Rover firmware's expectations for throttle and steering control.
 
-### 3D Printed Components (September 2025)
+### 3D Printed Components
 
 ![All four wheels and tires laid out](images/2025-09-21-multiple-wheels-and-tires-laid-out.jpg)
 
@@ -96,7 +96,7 @@ Printed wheel and tire assemblies:
 - Tires: TPU (~5 hours each)
 - Total filament: ~1000g
 
-### Frame Fabrication (November 2025)
+### Frame Fabrication
 
 ![Completed aluminum frame](images/2025-11-11-complete-2020-aluminum-frame-assembly.jpg)
 
@@ -104,7 +104,7 @@ Cut and assembled the 2020 aluminum extrusion frame. Drilled and tapped M6 threa
 
 ![Frame with wheels mockup](images/2025-11-11-frame-with-wheels-mockup.jpg)
 
-### Servo Mount Iteration (November 2025)
+### Servo Mount Iteration
 
 The steering servo mount required four design iterations:
 
