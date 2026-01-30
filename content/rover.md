@@ -34,32 +34,15 @@ The body panels are inspired by ED-209 from RoboCop—because if you're going to
 - **Autonomy:** GPS waypoint navigation via ArduPilot
 - **Range:** Multi-kilometer (anywhere in the neighborhood)
 
-## Budget
-
-Started with "maybe $300?" Ended up around $800.
-
-| Category | Cost |
-|----------|------|
-| Aluminum frame | $40 |
-| Motors & ESCs | $120 |
-| Steering servo | $30 |
-| Flight controller | $50 |
-| GPS module | $40 |
-| Batteries (2x) | $80 |
-| Transmitter & receiver | $100 |
-| 3D printing filament | $50 |
-| Bearings, bolts, hardware | $50 |
-| **Parts subtotal** | **$560** |
-| Tools (saw, blade, taps, etc.) | ~$200 |
-| **Total** | **~$800** |
-
 ## Build Log
+
+This is an ongoing project as I learn about building machines from scratch. Everything here is a work in progress.
 
 ### Design Phase (September 2025)
 
 ![Early concept sketches](images/2025-09-early-rover-concept-sketches.jpg)
 
-Started designing in Onshape (browser-based CAD, works on Debian). Went with brushed motors instead of brushless—simpler, easier to control, saved $100-200 on budget.
+Started designing in Onshape (browser-based CAD, works on Debian). Went with brushed motors instead of brushless—simpler and easier to control at low speeds.
 
 Key decisions:
 - Custom 17cm 3D-printed wheels for curb clearance
@@ -144,16 +127,10 @@ Lessons learned:
 
 ![Current rover state with servo and motor mounts](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 
-- **Completed:** Frame, drivetrain, steering geometry, component procurement
-- **In Progress:** Electronics integration, power distribution, flight controller config
-- **Next:** Remote control testing, GPS navigation, autonomous features
+This is a long-term learning project. Current focus is on electronics integration and getting basic remote control working before moving on to autonomous features.
 
 ## Tools & Software
 
 - **CAD:** Onshape (browser-based, works on Linux)
 - **Mission Planning:** QGroundControl on Debian
 - **Firmware:** ArduPilot
-
----
-
-*Built with determination, caffeine, and occasional profanity | 2025*
