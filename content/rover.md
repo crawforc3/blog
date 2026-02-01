@@ -69,7 +69,7 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 ![Aluminum frame with white 3D-printed motor mounts and steering components attached](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 *Frame with steering and motor mounts installed*
 
-### Powertrain
+### Drivetrain
 
 Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40T brushed motors. Getting power from the motor shafts to the wheels required flexible couplers. Rigid connections would bind up with any misalignment, and there's always misalignment. The bearings are 6000RS with a 10mm bore, and I spent way too long getting the shaft diameter right. 9.98mm fits a 10mm bore smoothly. 10.02mm does not.
 
@@ -145,7 +145,7 @@ Inside the enclosure, I designed caddies for the batteries, flight controller, a
 
 ArduPilot configuration was its own adventure. I spent three days figuring out that "Roll" controls steering in rover mode, not "Yaw" like you'd expect. The motors use SERVO function 70 (throttle), and steering uses function 26 (GroundSteering). Now it makes sense. At the time, it did not.
 
-![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-powertrain-enclosure.jpg)
+![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
 
 ## Current Status
