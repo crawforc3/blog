@@ -9,3 +9,7 @@ title: datumplane
 ## About
 
 - [[resume|Resume]]
+
+## Contact
+
+- [crawforc3@pm.me](mailto:crawforc3@pm.me)
