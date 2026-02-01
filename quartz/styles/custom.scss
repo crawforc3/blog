@@ -2,6 +2,23 @@
 
 // put your custom CSS here!
 
+// Print/export button for resume
+.print-button {
+  background-color: var(--secondary);
+  color: var(--darkgray);
+  border: 1px solid var(--darkgray);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+
+  &:hover {
+    background-color: var(--tertiary);
+    color: var(--light);
+  }
+}
+
 // Print styles for resume page
 @media print {
   // Hide navigation and UI elements
@@ -19,7 +36,8 @@
   footer,
   .footer,
   .page-footer,
-  .spacer {
+  .spacer,
+  .print-button {
     display: none !important;
   }
 

@@ -9,6 +9,8 @@ tags: []
 
 [crawforc3@pm.me](mailto:crawforc3@pm.me)
 
+<button onclick="window.print()" class="print-button">Export as PDF</button>
+
 ---
 
 ## Experience
