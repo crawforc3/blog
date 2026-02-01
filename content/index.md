@@ -2,14 +2,14 @@
 title: datumplane
 ---
 
-## Projects
+## Contact
 
-- [[rover|Autonomous Rover Build]] - Building a self-driving homebrew delivery vehicle
+- [crawforc3@pm.me](mailto:crawforc3@pm.me)
 
 ## About
 
 - [[resume|Resume]]
 
-## Contact
+## Projects
 
-- [crawforc3@pm.me](mailto:crawforc3@pm.me)
+- [[rover|Autonomous Rover Build]] - Building a self-driving homebrew delivery vehicle
