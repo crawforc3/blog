@@ -2,32 +2,6 @@
 
 // put your custom CSS here!
 
-// 90's style hit counter
-.hit-counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 3em;
-  gap: 0.5em;
-
-  .counter-label {
-    font-size: 0.9em;
-    color: var(--darkgray);
-  }
-
-  .counter-digits {
-    font-family: "Courier New", monospace;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #00ff00;
-    background: #000;
-    padding: 0.3em 0.6em;
-    letter-spacing: 0.15em;
-    border: 3px ridge #888;
-    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.3);
-  }
-}
-
 // Print/export button for resume
 .print-button {
   background-color: var(--secondary);
