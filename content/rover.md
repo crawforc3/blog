@@ -171,5 +171,5 @@ Right now I'm working on the gearbox design. The smoking motor incident made it 
 
 ## See Also
 
-- [[rover-cad|CAD Models]] - Onshape renders and design views
-- [[rover-notes|Design Notes and Calculations]] - Hand-drawn sketches and calculations
+- [[rover/cad|CAD Models]] - Onshape renders and design views
+- [[rover/notes|Design Notes and Calculations]] - Hand-drawn sketches and calculations
