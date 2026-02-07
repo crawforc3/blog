@@ -39,6 +39,10 @@ This page documents the build. Components are subject to change as I break thing
 
 ## Design Decisions
 
+### Build vs Buy
+
+When I look at a component and it's $20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. Instead of spending $80+ on parts that might not fit right anyway, I'd rather buy a tool that helps me make the parts. The money goes further that way. It keeps my costs low (because time is free, right?), it's an investment in myself, and it satisfies my curiosity about how things actually work. Half the parts on this rover are custom printed for exactly this reason.
+
 ### Ackerman Steering Geometry
 
 I went with Ackerman steering instead of skid-steer. The inside wheel turns sharper than the outside wheel during a turn, which is how actual cars work. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's steering logic. Ackerman plays nice with the GroundSteering servo function and doesn't leave rubber all over my driveway.
@@ -126,6 +130,14 @@ I printed my own wheels. 17cm diameter, 6.5cm wide, with a hex hub interface so 
 ![Two completed wheels with white hubs and black knobby tires side by side](images/2025-09-23-two-complete-wheel-assemblies.jpg)
 *Final wheels and tires*
 
+The gearbox redesign needed a new drive wheel hub. I went with a 5-lug design, planning to use heat inserts in the wheel so the hub could bolt on cleanly. The problem was the lack of infill in the wheel. The heat inserts just fell right into the plastic. I don't want to waste the wheels though, so super glue will work for now. If I need to reprint the wheels I'll bump up the infill, though I didn't keep track of what I used for these ones. Lesson learned on documenting print settings. But I probably won't keep track of the next ones either.
+
+![Black 3D-printed wheel hub with 5-lug bolt pattern and metal shaft](images/2026-02-5-lug-wheel-hub.jpg)
+*New 5-lug wheel hub*
+
+![Wheel hub mounted inside black wheel with knobby tire](images/2026-02-wheel-hub-mounted-in-wheel.jpg)
+*Hub mounted in the wheel*
+
 ### Electronics
 
 The brain is a SpeedyBee F405 WING running ArduPilot Rover firmware. It's a flight controller, but ArduPilot doesn't care that I'm on the ground. GPS comes from a Matek M10Q-5883 module with a built-in compass. RC control uses ExpressLRS protocol. Low latency, good range, and if I mess up the autonomous navigation I can take over manually.
@@ -150,7 +162,13 @@ ArduPilot configuration was its own adventure. I spent three days figuring out t
 
 ## Current Status
 
-Right now I'm working on the gearbox design. The smoking motor incident made it clear I need that 40:1 reduction. But of course, the gearbox output isn't level with the drive axles, so I'll need to redesign all the motor mounts too. Given my track record with this project, something will always need to be redesigned. That's fine. That's how this works.
+Right now I'm working on the gearbox design. The smoking motor incident made it clear I need that 40:1 reduction. Since starting work on the gearbox, I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I've decided to design some 3D printed universal joints. This should let me run an intermediate shaft between the gearbox and wheels without redesigning as much. I think it will also be useful in future iterations when I need to add suspension.
+
+![Black 3D-printed gearbox enclosure with lid open, showing two red spur gears and output shaft](images/2026-02-gearbox-open-enclosure-red-gears.jpg)
+*Current gearbox with red spur gears*
+
+![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
+*Gearbox and motor assembly with wheel attached*
 
 ![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
 *Current state of the build*
