@@ -9,39 +9,21 @@ I'm building a rover that can navigate my neighborhood autonomously. GPS waypoin
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.
 
+When I look at a component and it's $20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. Instead of spending $80+ on parts that might not fit right anyway, I'd rather buy a tool that helps me make the parts. The money goes further that way. It keeps my costs low (because time is free, right?), it's an investment in myself, and it satisfies my curiosity about how things actually work. Half the parts on this rover are custom printed for exactly this reason.
+
 This page documents the build. Components are subject to change as I break things and figure out better approaches.
 
 ![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
 *CAD render of the current design*
 
-## Project Requirements
+## Current Status
 
-| Requirement | Specification |
-|-------------|---------------|
-| Payload capacity | 10 lbs |
-| Target speed | ~3 mph |
-| Terrain | Paved surfaces, sidewalks, curbs, grass, mild grades |
-| Navigation | GPS waypoint autonomy via ArduPilot |
-| Operating range | Multi-kilometer |
+The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I've decided to design some 3D printed universal joints. This should let me run an intermediate shaft between the gearbox and wheels without redesigning as much. I think it will also be useful in future iterations when I need to add suspension.
 
-## Technical Specifications
-
-| System | Component | Details |
-|--------|-----------|---------|
-| Frame | 2020 aluminum extrusion | 24" x 18" bolted frame |
-| Drivetrain | Brushed DC motors | Dual HOBBYWING QUICRUN 1080 G2 ESCs, 540 40T motors |
-| Steering | Ackerman geometry | Zoskay DS3235 servo (35kg-cm torque) |
-| Flight controller | SpeedyBee F405 WING | STM32F405 @ 168MHz, ArduPilot Rover firmware |
-| GPS | Matek M10Q-5883 | GPS + magnetometer module |
-| Power | Dual 3S LiPo | 15000mAh each, 333Wh total capacity |
-| Wheels | Custom 3D-printed | 17cm diameter, 6.5cm width, 6000RS bearings |
-| RC | ExpressLRS | Radiomaster TX12 MKII transmitter, BetaFPV SuperD receiver |
+![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
+*Current state of the build*
 
 ## Design Decisions
-
-### Build vs Buy
-
-When I look at a component and it's $20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. Instead of spending $80+ on parts that might not fit right anyway, I'd rather buy a tool that helps me make the parts. The money goes further that way. It keeps my costs low (because time is free, right?), it's an investment in myself, and it satisfies my curiosity about how things actually work. Half the parts on this rover are custom printed for exactly this reason.
 
 ### Ackerman Steering Geometry
 
@@ -86,15 +68,28 @@ Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40
 ![Complete assembly showing motor, coupler, bearing housing, and black wheel with tire attached](images/2025-09-28-complete-wheel-motor-test-assembly.jpg)
 *Complete drivetrain assembly with wheel attached*
 
-The initial test drive was humbling. The rover couldn't drive over a small power cord in the garage. When I pushed throttle to the max, one of the motors started smoking. That's when I knew I couldn't get away from learning about gears and gear boxes. I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler gear assemblies out there, but this one is mine.
+The initial test drive was humbling. The rover couldn't drive over a small power cord in the garage. When I pushed throttle to the max, one of the motors started smoking. That's when I knew I couldn't get away from learning about gears and gear boxes.
+
+<video controls width="100%">
+  <source src="images/VID_20251209_151820062.mp4" type="video/mp4">
+</video>
+*Test drive before the gearbox redesign*
+
+I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler gear assemblies out there, but this one is mine.
 
 ![White 3D-printed gearbox with two gear stages visible, showing large and small spur gears](images/2026-01-2-stage-gearbox-40-1-reduction.jpg)
 *2-stage gearbox providing 40:1 reduction*
+
+![Black 3D-printed gearbox enclosure with lid open, showing two red spur gears and output shaft](images/2026-02-gearbox-open-enclosure-red-gears.jpg)
+*Current gearbox with red spur gears*
 
 <video controls width="100%">
   <source src="images/2026-01-gearbox-motor-test.mp4" type="video/mp4">
 </video>
 *Gearbox bench test with motor*
+
+![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
+*Gearbox and motor assembly with wheel attached*
 
 ### Steering
 
@@ -160,32 +155,26 @@ ArduPilot configuration was its own adventure. I spent three days figuring out t
 ![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
 
-## Current Status
+## Specifications
 
-Right now I'm working on the gearbox design. The smoking motor incident made it clear I need that 40:1 reduction. Since starting work on the gearbox, I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I've decided to design some 3D printed universal joints. This should let me run an intermediate shaft between the gearbox and wheels without redesigning as much. I think it will also be useful in future iterations when I need to add suspension.
+| Requirement | Specification |
+|-------------|---------------|
+| Payload capacity | 10 lbs |
+| Target speed | ~3 mph |
+| Terrain | Paved surfaces, sidewalks, curbs, grass, mild grades |
+| Navigation | GPS waypoint autonomy via ArduPilot |
+| Operating range | Multi-kilometer |
 
-![Black 3D-printed gearbox enclosure with lid open, showing two red spur gears and output shaft](images/2026-02-gearbox-open-enclosure-red-gears.jpg)
-*Current gearbox with red spur gears*
-
-![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
-*Gearbox and motor assembly with wheel attached*
-
-![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
-*Current state of the build*
-
-<video controls width="100%">
-  <source src="images/VID_20251209_151820062.mp4" type="video/mp4">
-</video>
-*Test drive before the gearbox redesign*
-
-## Tools & Techniques
-
-| Area | Tools & Skills |
-|------|----------------|
-| Mechanical Design | CAD modeling, Ackerman steering geometry, drivetrain layout, bearing selection |
-| Fabrication | Aluminum frame construction, 3D printing (PLA/TPU), wire routing |
-| Embedded Systems | ArduPilot configuration, ESC/servo integration, RC systems |
-| Software | Onshape, PrusaSlicer, QGroundControl, ArduPilot Rover |
+| System | Component | Details |
+|--------|-----------|---------|
+| Frame | 2020 aluminum extrusion | 24" x 18" bolted frame |
+| Drivetrain | Brushed DC motors | Dual HOBBYWING QUICRUN 1080 G2 ESCs, 540 40T motors |
+| Steering | Ackerman geometry | Zoskay DS3235 servo (35kg-cm torque) |
+| Flight controller | SpeedyBee F405 WING | STM32F405 @ 168MHz, ArduPilot Rover firmware |
+| GPS | Matek M10Q-5883 | GPS + magnetometer module |
+| Power | Dual 3S LiPo | 15000mAh each, 333Wh total capacity |
+| Wheels | Custom 3D-printed | 17cm diameter, 6.5cm width, 6000RS bearings |
+| RC | ExpressLRS | Radiomaster TX12 MKII transmitter, BetaFPV SuperD receiver |
 
 ## See Also
 
