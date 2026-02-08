@@ -9,7 +9,7 @@ I'm building a rover that can navigate my neighborhood autonomously. GPS waypoin
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.
 
-When I look at a component and it's $20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. Instead of spending $80+ on parts that might not fit right anyway, I'd rather buy a tool that helps me make the parts. The money goes further that way. It keeps my costs low (because time is free, right?), it's an investment in myself, and it satisfies my curiosity about how things actually work. Half the parts on this rover are custom printed for exactly this reason.
+When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. Instead of spending \$80+ on parts that might not fit right anyway, I'd rather buy a tool that helps me make the parts. The money goes further that way. It keeps my costs low (because time is free, right?), it's an investment in myself, and it satisfies my curiosity about how things actually work. Half the parts on this rover are custom printed for exactly this reason.
 
 This page documents the build. Components are subject to change as I break things and figure out better approaches.
 
