@@ -16,12 +16,15 @@ This page documents the build. Components are subject to change as I break thing
 ![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
 *CAD render of the current design*
 
+![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
+*Current state of the build*
+
 ## Current Status
 
 The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts, printed two of them, and connected them with an intermediate shaft. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me. Anyway, I still need to cut some aluminum rods to get the shaft lengths right, but the prototype is looking promising.
 
-![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
-*Current state of the build*
+![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
+*Dual cardan universal joint prototype for solving the gearbox alignment problem*
 
 ## Design Decisions
 
@@ -91,7 +94,7 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 ![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
 *Gearbox and motor assembly with wheel attached*
 
-![Prototype dual cardan universal joint connecting gearbox output shaft to wheel shaft](images/IMG_20260210_202432332_HDR_PORTRAIT.jpg)
+![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
 *Dual cardan universal joint prototype for solving the gearbox alignment problem*
 
 ### Steering
