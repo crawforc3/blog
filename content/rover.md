@@ -80,8 +80,8 @@ The initial test drive was humbling. The rover couldn't drive over a small power
 
 I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler gear assemblies out there, but this one is mine.
 
-![White 3D-printed gearbox with two gear stages visible, showing large and small spur gears](images/2026-01-2-stage-gearbox-40-1-reduction.jpg)
-*2-stage gearbox providing 40:1 reduction*
+![Red 3D-printed 2-stage gearbox with motor attached, held in a vise on workbench](images/2026-01-2-stage-gearbox-40-1-reduction.jpg)
+*2-stage gearbox with motor attached*
 
 ![Black 3D-printed gearbox enclosure with lid open, showing two red spur gears and output shaft](images/2026-02-gearbox-open-enclosure-red-gears.jpg)
 *Current gearbox with red spur gears*
