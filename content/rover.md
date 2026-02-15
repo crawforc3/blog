@@ -123,6 +123,9 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 ![Top view of steering linkage showing tie rods connecting servo to both front knuckles](images/2026-01-steering-linkage-assembly.jpg)
 *Steering linkage*
 
+![Top-down view of aluminum frame with steering knuckles and servo mounted, before steering arm installation](images/2025-11-steering-assembly-on-frame.jpg)
+*Steering assembly mounted on the frame*
+
 ### Wheels and Tires
 
 I printed my own wheels. 17cm diameter, 6.5cm wide, with a hex hub interface so they pop on and off easily. The wheels are PLA, rigid enough to hold their shape. The tires are TPU, which is flexible and grippy. Press-fitting 6000RS bearings into PLA hubs requires getting the hole diameter exactly right. Too tight and the bearing won't go in. Too loose and it falls out. I got it right eventually.
