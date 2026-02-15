@@ -53,6 +53,12 @@ The resume page (`content/resume.md`) has print-friendly styles. To export as PD
 2. Use browser print (Ctrl+P / Cmd+P)
 3. Save as PDF
 
+## Image Conventions
+
+- Rename image files to match the naming convention: `YYYY-MM-description.ext` (e.g. `2026-01-2-stage-gearbox-40-1-reduction.jpg`). Never use raw camera filenames.
+- Always read new images before renaming to give them an accurate descriptive name.
+- `content/images/current-status.jpg` on the rover page should always show the most recent full rover photo. Only update it when a new full rover image is added, not for component-level images.
+
 ## Ignored Directories
 
 These are excluded from the build (see `quartz.config.ts`):

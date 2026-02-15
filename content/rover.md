@@ -19,7 +19,12 @@ Here's where things stand:
 
 ## Current Status
 
-The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts, printed two of them, and connected them with an intermediate shaft. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me. Anyway, I still need to cut some aluminum rods to get the shaft lengths right, but the prototype is looking promising.
+The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me.
+
+I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts that worked well for prototyping, but I needed a model in Onshape to get all the measurements right before cutting aluminum rods. So I designed my own.
+
+![CAD render of a custom universal joint design](images/2026-02-custom-universal-joint-cad.png)
+*Custom universal joint design*
 
 ![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
 *Dual cardan universal joint prototype for solving the gearbox alignment problem*
