@@ -158,6 +158,9 @@ Power is two 3S LiPo batteries, 15000mAh each. That's 333Wh total, which should 
 
 Inside the enclosure, I designed caddies for the batteries, flight controller, and ESCs. Each component velcro-straps to a caddy, and the caddies screw into the enclosure where I added heat inserts. It keeps everything modular and easy to swap out when I inevitably fry something.
 
+![CAD render of electronics enclosure with component caddies sitting on their mounting holes](images/2026-02-electronics-enclosure-caddies-cad.png)
+*Enclosure with component caddies*
+
 ![Inside of enclosure showing white 3D-printed trays holding batteries and electronics with velcro straps](images/2025-12-electronics-caddies-detail.jpg)
 *Enclosure with batteries and ESCs installed in caddies*
 
