@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "crawforc3.github.io/blog",
-    ignorePatterns: ["private", "templates", ".obsidian", "logseq"],
+    ignorePatterns: ["private", "templates", ".obsidian", "logseq", "pages"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
