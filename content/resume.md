@@ -84,7 +84,7 @@ tags: []
 
 - **Autonomous Rover:** I am building an autonomous rover to deliver homebrew to my neighbors ([blog post](https://crawforc3.github.io/blog/rover))
 - **Homebrewing beer:** I have been homebrewing beer for over 15 years and I even brewed beer professionally for a couple of years.
-- **3D printing:** I use OnShape to create 3D models for the various projects I am working on. I have designed, modeled, and printed tools for homebrewing, biodegradable seed starters, and parts for my autonomous rover ([Printables](https://www.printables.com/@crawforc3))
+- **3D printing:** I use OnShape to create 3D models for the various projects I am working on. I have designed, modeled, and printed tools for homebrewing, biodegradable seed starters, and parts for my autonomous rover ([projects](https://crawforc3.github.io/blog))
 - **Self-hosting and Homelab:** I maintain a 3-node cluster of servers in my basement where I use Proxmox for virtualization and high availability. I host my own servers for Gitea (GitHub alternative), games, VPNs, and various other services.
 - **Kaggle:** I am a Kaggle Grandmaster and was the world's first Kaggle Datasets Grandmaster ([profile](https://www.kaggle.com/crawford))
 
