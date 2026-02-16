@@ -111,6 +111,8 @@ async function _navigate(url: URL, isBack: boolean = false) {
       el?.scrollIntoView()
     } else {
       window.scrollTo({ top: 0 })
+      // ensure scroll reset after any layout shifts from DOM morph
+      requestAnimationFrame(() => window.scrollTo({ top: 0 }))
     }
   }
 
