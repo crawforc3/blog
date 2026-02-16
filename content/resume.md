@@ -9,7 +9,7 @@ tags: []
 
 [crawforc3@pm.me](mailto:crawforc3@pm.me)
 
-<button onclick="window.print()" class="print-button">Export as PDF</button>
+<button onclick="window.print()" class="print-button">Export as PDF</button> [View as Markdown](https://raw.githubusercontent.com/crawforc3/blog/main/content/resume.md)
 
 ---
 
