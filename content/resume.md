@@ -5,7 +5,7 @@ tags: []
 
 # Chris Crawford
 
-**Data Engineer**
+**Crunchy Taco Enjoyer, Data Engineer**
 
 [crawforc3@pm.me](mailto:crawforc3@pm.me)
 
@@ -16,52 +16,51 @@ tags: []
 ## Experience
 
 ### Data Engineer
-**John Deere** (Agriculture/Manufacturing) | Apr 2021 – Present
+**John Deere** (Agriculture/Manufacturing) | Apr 2021 - Current
 
-- Led migration of ML model serving infrastructure from AWS SageMaker to Databricks, designing architectural diagrams, migration flow charts, and technical documentation for cross-platform deployment
-- Built and maintained MLOps infrastructure using Terraform and GitHub Actions, including IAM roles/policies, Databricks model serving endpoints, and Unity Catalog permissions for production ML workloads
-- Implemented real-time alerting and monitoring systems for ML inference pipelines, including Databricks alerts with Microsoft Teams notifications and automated non-200 status monitoring
-- Developed reusable GitHub Actions for secure AWS Secrets Manager integration, enabling centralized credential management across data engineering repositories with OIDC authentication
-- Established CI/CD pipelines and infrastructure-as-code practices for Databricks deployments, including schema management, inference table grants, and service principal permissions
-- Contributed technical documentation and architectural designs for the precision agriculture platform, supporting team knowledge sharing and onboarding for ML infrastructure initiatives
+- Led migration of ML model serving infrastructure from AWS SageMaker to Databricks, reducing infrastructure costs and operational overhead; established Databricks as the standard deployment target for all new models while incrementally migrating existing endpoints.
+- Designed and developed high-throughput ML inference API handling 2,000+ requests/sec using AWS Lambda, API Gateway, and SageMaker; enabled new recurring revenue streams for precision agriculture products.
+- Codified ML infrastructure deployments using Terraform and GitHub Actions, managing IAM policies, Unity Catalog permissions, and service principal configurations to enable repeatable, auditable production deployments.
+- Overhauled observability for ML inference endpoints after a production outage went unnoticed, refactoring error handling, reconfiguring Datadog dashboards for clearer visibility, and adding real-time alerts to prevent recurrence.
+- Developed reusable GitHub Actions for secure AWS Secrets Manager integration with OIDC authentication, standardizing credential management across the team's data engineering repositories and enabling adoption by other engineering teams.
+- Designed onboarding project and technical roadmap for an Engineering Development Program mentee, breaking down their first endpoint migration into structured stories covering CI/CD, Terraform, and Databricks deployment patterns.
 
 **Awards:**
-- *2025* – Quarterly Award: Developed machine learning infrastructure to classify machine state at 250k+ requests per min.
-- *2023* – Quarterly Award: Developed machine learning API that enabled legacy machines to benefit from data science initiatives.
-- *2022* – Quarterly Award: Developed data pipeline to facilitate safely training ML models with data protected by global privacy laws.
+- *2025* - Quarterly Award: ML inference infrastructure classifying machine state at 150k+ requests/min.
+- *2023* - Quarterly Award: ML API enabling machine state classification for equipment without onboard display technology.
+- *2022* - Quarterly Award: Data pipeline to filter training data potentially regulated by international privacy laws.
 
 ### Data Engineer
-**Team Rubicon** (Disaster Response Non-profit) | Mar 2019 – Feb 2021
+**Team Rubicon** (Disaster Response Non-profit) | Mar 2019 - Feb 2021
 
 - Developed analytical pipeline to quantify financial impact of volunteers over 300+ disaster operations; secured $200k donation.
 - Leveraged GIS to map and prioritize disaster relief needs by combining CDC Social Vulnerability Index with operational data.
-- Designed and developed the entire data analytics platform for the organization with Azure Datalake, Databricks, and Function apps.
-- Migrated data analytics platform from Palantir Foundry to Databricks; enabled organization-wide access to more data analytics tools.
+- Migrated data analytics platform from Palantir Foundry to Azure; enabled organization-wide access to more data analytics tools.
 - Mentored two junior analysts on Power BI and SQL; doubled data engineering capacity and reduced requests for ad-hoc analyses.
 
 **Awards:**
-- *2021* – [Esri Special Achievement in GIS](https://events.esri.com/conference/sagList/?fa=List&awardyear=2021)
-- *2019* – U.S. President's Volunteer Service Award with special commitment to Disaster Response Services.
+- *2021* - [Esri Special Achievement in GIS](https://events.esri.com/conference/sagList/?fa=List&awardyear=2021)
+- *2019* - U.S. President's Volunteer Service Award with special commitment to Disaster Response Services.
 
 ### Data Analyst, Developer Advocate (contract)
-**Kaggle** (Data Science Competitions) | Jun 2017 – Mar 2019
+**Kaggle** (Data Science Competitions) | Jun 2017 - Mar 2019
 
 - Partnered with the NFL to develop [NFL First and Future](https://www.nfl.com/causes/1st-and-future/), a crowd-sourced competition to improve player safety through data science.
 - Created a new competition format with non-profit partners, driving an 8% increase in competition launches in 2018.
 
 ### Software Engineering Intern
-**Smashrun** (Fitness Analytics) | Sept 2016 – Dec 2016
+**Smashrun** (Fitness Analytics) | Sept 2016 - Dec 2016
 
 - Developed a data pipeline for processing geojson data into map tiles and generating geospatial visualizations of user running activity.
 
 ### Bioinformatics Engineering Intern
-**Adaptive Biotechnologies** (Biotech) | May 2016 – Sept 2016
+**Adaptive Biotechnologies** (Biotech) | May 2016 - Sept 2016
 
 - Developed bioinformatics tool with Python and R to automate chi-square testing of DNA sequencing data for sample independence.
 - Automated statistical reporting and generating scientific publication-ready data visualizations using Pandas, Matplotlib, Seaborn.
 
 ### Aircraft Electrical and Environmental Specialist
-**United States Air Force** | Dec 2005 – Dec 2009
+**United States Air Force** | Dec 2005 - Dec 2009
 
 - Trained airmen on aircraft maintenance and safety, achieving 100% success in quality assurance and zero injuries over two years.
 - Maintained electrical and avionics systems on C-130 and MQ-9 aircraft, ensuring mission readiness for fleets valued at over $500M.
@@ -73,11 +72,11 @@ tags: []
 
 ## Education
 
-**Master of Science, Bioinformatics** – Northeastern University, Dec 2016
+**Master of Science, Bioinformatics** - Northeastern University, Dec 2016
 
-**Bachelor of Science, Biology** – Pacific Lutheran University, Dec 2013
+**Bachelor of Science, Biology** - Pacific Lutheran University, Dec 2013
 
-**Associate of Applied Science, Aircraft Maintenance Technology** – Community College of the Air Force, May 2008
+**Associate of Applied Science, Aircraft Maintenance Technology** - Community College of the Air Force, May 2008
 
 ---
 
@@ -95,12 +94,12 @@ tags: []
 
 **Cloud & Infrastructure:** AWS, Terraform, Docker, Lambda, S3, API Gateway, ECS, ECR, AWS Secrets Manager, Active Directory
 
-**Data & Databases:** SQL, PostgreSQL, MySQL, Redis, DynamoDB, Data Lake, Delta Lake, Spark, Scala
+**Data & Databases:** SQL, PostgreSQL, MySQL, Redis, DynamoDB, Data Lake, Delta Lake, Data pipeline, Spark, Scala, Python, Pandas
 
-**ML & Analytics:** Databricks, SageMaker, MLFlow, Model Serving, Machine Learning, Python, Pandas
+**ML & Analytics:** Databricks, SageMaker, MLFlow, Model Serving, Machine Learning
 
 **GIS & Geospatial:** Esri, ArcGIS, GIS, Shapely
 
-**DevOps & Testing:** GitHub Actions, Jenkins, Drone, CI/CD, Unit Testing, Integration Testing, Load Testing, Locust
+**DevOps & Testing:** GitHub Actions, Jenkins, Drone, CI/CD, Unit Testing, Integration Testing, Deployment Testing, Load Testing, Locust
 
 **APIs & Monitoring:** REST API, OpenAPI, Swagger, Datadog, Dashboards
