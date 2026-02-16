@@ -79,7 +79,7 @@ Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40
 The initial test drive was humbling. The rover couldn't drive over a small power cord in the garage. When I pushed throttle to the max, one of the motors started smoking. That's when I knew I couldn't get away from learning about gears and gear boxes.
 
 <video controls width="100%">
-  <source src="images/VID_20251209_151820062.mp4" type="video/mp4">
+  <source src="../images/VID_20251209_151820062.mp4" type="video/mp4">
 </video>
 *Test drive before the gearbox redesign*
 
@@ -92,7 +92,7 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 *Current gearbox with red spur gears*
 
 <video controls width="100%">
-  <source src="images/2026-01-gearbox-motor-test.mp4" type="video/mp4">
+  <source src="../images/2026-01-gearbox-motor-test.mp4" type="video/mp4">
 </video>
 *Gearbox bench test with motor*
 
