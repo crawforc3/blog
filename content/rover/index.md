@@ -29,6 +29,13 @@ I [found 3D printable universal joint models](https://www.myminifactory.com/obje
 ![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
 *Dual cardan universal joint prototype for solving the gearbox alignment problem*
 
+With the right-side linkage CAD'd up, I mirrored it for the left side and immediately ran into a new problem: the motors are trying to occupy the same space. Both gearboxes have their motors pointing toward the center of the rover, so when you mirror them they collide.
+
+![Top-down CAD view of rear axle showing two gearboxes with motors overlapping in the center](images/2026-02-rear-axle-gearbox-motor-overlap-cad.png)
+*Top-down view showing the motor overlap problem when both gearboxes are in place*
+
+The fix is to redesign the gearbox so the output shaft comes out the opposite side. Then I can flip the gearboxes over and the motors will point outward toward the wheels instead of inward toward each other. More redesign, but at least it's a clear path forward.
+
 ## Design Decisions
 
 When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
