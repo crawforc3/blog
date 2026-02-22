@@ -36,9 +36,6 @@ With the right-side linkage CAD'd up, I mirrored it for the left side and immedi
 
 The fix was to redesign the gearbox so the output shaft comes out the same side as the motor. Flipping the gearbox puts the motor toward the wheel instead of toward the center, so there's no more overlap. The redesign is done and both gearboxes fit in Onshape without any conflicts.
 
-![Isometric CAD view of rear axle with two redesigned gearboxes, one shown with transparency](images/2026-02-gearbox-same-side-output-iso.png)
-*Both gearboxes in place on the rear axle*
-
 ![Top-down CAD view of rear axle showing both redesigned gearboxes with motors pointing outward](images/2026-02-gearbox-same-side-output-top.png)
 *Top view showing the motors no longer overlapping*
 
