@@ -45,6 +45,9 @@ The fix was to redesign the gearbox so the output shaft comes out the same side 
 ![Front CAD view of rear axle with redesigned gearboxes and wheels](images/2026-02-gearbox-same-side-output-front.png)
 *Front view of the rear axle assembly*
 
+![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
+*Gearbox in context with the rest of the rover*
+
 Next up is figuring out how to mount the gearboxes to the frame.
 
 ## Design Decisions
