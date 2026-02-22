@@ -9,8 +9,6 @@ I'm building a rover that can navigate my neighborhood autonomously. GPS waypoin
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.
 
-Here's where things stand:
-
 ![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
 *CAD render of the current design*
 
@@ -46,22 +44,6 @@ The fix was to redesign the gearbox so the output shaft comes out the same side 
 *Gearbox in context with the rest of the rover*
 
 Next up is figuring out how to mount the gearboxes to the frame.
-
-## Design Decisions
-
-When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
-
-### Ackerman Steering Geometry
-
-I went with Ackerman steering instead of skid-steer. The inside wheel turns sharper than the outside wheel during a turn, which is how actual cars work. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's steering logic. Ackerman plays nice with the GroundSteering servo function and doesn't leave rubber all over my driveway.
-
-### Brushed vs Brushless Motors
-
-Brushed motors. I know, I know. Brushless is more efficient. But at 3 mph, efficiency doesn't matter. What matters is smooth low-speed control, and brushed motors do that without needing sensored feedback or fancy ESC tuning. They're also cheaper, and I've already spent enough on this project.
-
-### Wheel Design
-
-The wheels need to climb curbs. Standard curbs are about 15cm, so I designed 17cm diameter wheels to clear them with some margin. I went with 6000RS bearings instead of the cheaper 608 skateboard bearings because the deeper groove handles radial loads better. When you're carrying 10 pounds of beer over rough terrain, you want bearings that won't complain.
 
 ## Build Progress
 
@@ -116,9 +98,6 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 
 ![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
 *Gearbox and motor assembly with wheel attached*
-
-![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
-*Dual cardan universal joint prototype for solving the gearbox alignment problem*
 
 ### Steering
 
@@ -192,6 +171,22 @@ ArduPilot configuration was its own adventure. I spent three days figuring out t
 
 ![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
+
+## Design Decisions
+
+When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
+
+### Ackerman Steering Geometry
+
+I went with Ackerman steering instead of skid-steer. The inside wheel turns sharper than the outside wheel during a turn, which is how actual cars work. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's steering logic. Ackerman plays nice with the GroundSteering servo function and doesn't leave rubber all over my driveway.
+
+### Brushed vs Brushless Motors
+
+Brushed motors. I know, I know. Brushless is more efficient. But at 3 mph, efficiency doesn't matter. What matters is smooth low-speed control, and brushed motors do that without needing sensored feedback or fancy ESC tuning. They're also cheaper, and I've already spent enough on this project.
+
+### Wheel Design
+
+The wheels need to climb curbs. Standard curbs are about 15cm, so I designed 17cm diameter wheels to clear them with some margin. I went with 6000RS bearings instead of the cheaper 608 skateboard bearings because the deeper groove handles radial loads better. When you're carrying 10 pounds of beer over rough terrain, you want bearings that won't complain.
 
 ## Specifications
 
