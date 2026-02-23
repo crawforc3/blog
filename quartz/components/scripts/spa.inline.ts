@@ -61,6 +61,13 @@ let p: DOMParser
 async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
+
+  // Folder pages (no file extension) need a trailing slash so that relative
+  // paths like ../images/foo.png resolve correctly against the URL.
+  if (!url.pathname.endsWith("/") && !url.pathname.includes(".")) {
+    url = new URL(url.pathname + "/", url)
+  }
+
   p = p || new DOMParser()
   const contents = await fetchCanonical(url)
     .then((res) => {
