@@ -43,7 +43,9 @@ The fix was to redesign the gearbox so the output shaft comes out the same side 
 ![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
 *Gearbox in context with the rest of the rover*
 
-Next up is figuring out how to mount the gearboxes to the frame.
+The gearbox mount ended up being straightforward. Right now I'm printing parts and assembling, waiting to find the next problem.
+
+![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
 
 ## Build Progress
 
