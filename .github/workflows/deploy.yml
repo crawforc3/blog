@@ -1,4 +1,4 @@
-name: Deploy Quartz to GitHub Pages
+name: Deploy redirect to GitHub Pages
 
 on:
   push:
@@ -19,20 +19,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          lfs: true
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build Quartz
-        run: npx quartz build
+      - name: Create redirect pages
+        run: |
+          mkdir public
+          cat > public/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>Redirecting...</title>
+              <script>
+                const path = window.location.pathname.replace(/^\/blog/, '') || '/';
+                window.location.replace('https://crawforc3.github.io' + path + window.location.hash);
+              </script>
+            </head>
+            <body>
+              <p>This site has moved to <a href="https://crawforc3.github.io">crawforc3.github.io</a>.</p>
+            </body>
+          </html>
+          EOF
+          cp public/index.html public/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
