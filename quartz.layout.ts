@@ -38,7 +38,15 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      mapFn: (node) => {
+        // Single-page subdirectories (index.md with no sibling pages) should
+        // render as plain file links, not expandable folder dropdowns.
+        if (node.isFolder && node.children.length === 0) {
+          node.isFolder = false
+        }
+      },
+    }),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -61,7 +69,13 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      mapFn: (node) => {
+        if (node.isFolder && node.children.length === 0) {
+          node.isFolder = false
+        }
+      },
+    }),
   ],
   right: [],
 }
